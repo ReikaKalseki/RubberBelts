@@ -1,3 +1,3 @@
 Config = {}
 
-Config.replaceIronRecipe = false
+Config.replaceIronRecipe = settings.startup["replace-belt-recipe"].value--false
