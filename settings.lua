@@ -6,6 +6,6 @@ data:extend({
             default_value = true,
             order = "r",
 			localised_name = "Replace transport belt recipe",
-			localised_description = "If true, the iron-plate-and-gear recipe is removed in favor of the rubber one. If false, they will both exist.",
+			localised_description = "If true, the iron-plate-and-gear recipe is removed in favor of the rubber-and-gear one. If false, they will both exist.",
         }
 })
