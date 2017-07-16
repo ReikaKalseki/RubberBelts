@@ -1,6 +1,5 @@
 require "config"
 
-require("prototypes.overrides")
 require("prototypes.rubber")
 
 if not Config.replaceIronRecipe then
@@ -12,7 +11,7 @@ if not Config.replaceIronRecipe then
 		ingredients =
 		{
 		  {"rubber", 2},
-		  {"iron-gear-wheel", 1}
+		  {data.raw.item["motor"] and "motor" or "iron-gear-wheel", 1} --AAI Industry compat
 		},
 		result = "transport-belt",
 		result_count = 2,

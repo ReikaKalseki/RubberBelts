@@ -1,3 +1,5 @@
+if not data.raw.item["resin"] or not data.raw.item["rubber"] then
+
 data:extend(
 {
   {
@@ -38,3 +40,5 @@ data:extend(
     result = "rubber"
   },
 })
+
+end

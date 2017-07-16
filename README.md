@@ -6,3 +6,5 @@ Adds the ability to turn wood into resin into rubber, which is used to make basi
 Optionally removes the vanilla iron-only recipe
 
 Secondary Features:
+Uses BobMods rubber and resin if installed
+Compatibility with AAI Industry
