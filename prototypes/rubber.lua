@@ -27,7 +27,7 @@ data:extend(
   {
     type = "recipe",
     name = "resin",
-    ingredients = {{"raw-wood", 2}},
+    ingredients = {{"raw-wood", 1}},
     result = "resin",
     result_count = 3
   },
@@ -36,7 +36,7 @@ data:extend(
     name = "rubber",
     category = "smelting",
     energy_required = 2.5,
-    ingredients = {{ "resin", 2}},
+    ingredients = {{"resin", 2}},
     result = "rubber"
   },
 })

@@ -15,7 +15,13 @@ if not Config.replaceIronRecipe then
 		},
 		result = "transport-belt",
 		result_count = 2,
-		requester_paste_multiplier = 20
+		requester_paste_multiplier = 20,
+		enabled = data.raw.technology["basic-logistics"] == nil,
 	  },
 	})
+	
+
+	if data.raw.technology["basic-logistics"] then --AAI Industry "basic logistics"
+		table.insert(data.raw.technology["basic-logistics"].effects, {type = "unlock-recipe", recipe = "rubber-transport-belt"})
+	end
 end
