@@ -29,9 +29,19 @@ data:extend(
   {
     type = "recipe",
     name = "resin",
-    ingredients = {{"raw-wood", 1}},
-    result = "resin",
-    result_count = 3
+    --ingredients = {{"raw-wood", 1}},
+    --result = "resin",
+    --result_count = 3
+	normal = {
+		ingredients = {{"raw-wood", 1}},
+		result = "resin",
+		result_count = 3
+	},
+	expensive = {
+		ingredients = {{"raw-wood", 2}},
+		result = "resin",
+		result_count = 3
+	},
   },
   {
     type = "recipe",

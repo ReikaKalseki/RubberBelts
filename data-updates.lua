@@ -1,6 +1,7 @@
 require "config"
 
 require("prototypes.rubber")
+require "prototypes.crappybelt"
 
 if not Config.replaceIronRecipe then
 	data:extend(

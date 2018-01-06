@@ -21,3 +21,15 @@ if Config.replaceIronRecipe then
 		}
 	end
 end
+
+if data.raw.recipe["bob-resin-wood"] and Config.replaceIronRecipe then --his can normally only be made in an assembler, which is a problem if you need it for belts
+	data.raw.recipe["bob-resin-wood"].category = "crafting"
+end
+
+if data.raw["assembling-machine"]["bob-greenhouse"] then --buff greenhouses for increased wood use
+	data.raw["assembling-machine"]["bob-greenhouse"].crafting_speed = 1 --was 0.75, possibly unintentionally
+	data.raw.recipe["bob-basic-greenhouse-cycle"].normal.energy_required = data.raw.recipe["bob-basic-greenhouse-cycle"].normal.energy_required*0.5
+	data.raw.recipe["bob-basic-greenhouse-cycle"].expensive.energy_required = data.raw.recipe["bob-basic-greenhouse-cycle"].expensive.energy_required*0.5
+	data.raw.recipe["bob-advanced-greenhouse-cycle"].normal.energy_required = data.raw.recipe["bob-advanced-greenhouse-cycle"].normal.energy_required*0.5
+	data.raw.recipe["bob-advanced-greenhouse-cycle"].expensive.energy_required = data.raw.recipe["bob-advanced-greenhouse-cycle"].expensive.energy_required*0.5
+end

@@ -7,5 +7,12 @@ data:extend({
             order = "r",
 			--localised_name = "Replace transport belt recipe",
 			--localised_description = "If true, the iron-plate-and-gear recipe is removed in favor of the rubber-and-gear one. If false, they will both exist.",
+        },
+		{
+            type = "bool-setting",
+            name = "enable-crappy-belts",
+            setting_type = "startup",
+            default_value = true,
+            order = "r",
         }
 })
