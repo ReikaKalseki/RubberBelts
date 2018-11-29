@@ -16,7 +16,9 @@ if Config.enableCrappyBelts then
 			flags = {},
 			subgroup = "intermediate-product",
 			order = "f[raw-wood]-f[raw-wood-1-2]",
-			stack_size = 100
+			stack_size = 100,
+			fuel_category = "chemical",
+			fuel_value = data.raw.item["raw-wood"].fuel_value,
 		  },
 		  {
 			type = "recipe",
