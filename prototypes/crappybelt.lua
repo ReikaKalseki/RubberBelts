@@ -2,7 +2,18 @@ require "config"
 
 local function redirectTexture(entry)
 	entry.filename = "__RubberBelts__/graphics/entity/transport-belt.png"
-	entry.hr_version.filename = "__RubberBelts__/graphics/entity/hr-transport-belt.png"
+	if entry.hr_version then
+		entry.hr_version.filename = "__RubberBelts__/graphics/entity/hr-transport-belt.png"
+	end
+	for k,v in pairs(entry) do
+		if k == "filename" then
+			entry.filename = "__RubberBelts__/graphics/entity/transport-belt.png"
+		elseif k == "hr_version" then
+			v.filename = "__RubberBelts__/graphics/entity/hr-transport-belt.png"
+		elseif type(v) == "table" then
+			redirectTexture(v)
+		end
+	end
 end
 
 if Config.enableCrappyBelts then
@@ -15,10 +26,10 @@ if Config.enableCrappyBelts then
 			icon_size = 32,
 			flags = {},
 			subgroup = "intermediate-product",
-			order = "f[raw-wood]-f[raw-wood-1-2]",
+			order = "f[wood]-f[wood-1-2]",
 			stack_size = 100,
 			fuel_category = "chemical",
-			fuel_value = data.raw.item["raw-wood"].fuel_value,
+			fuel_value = data.raw.item["wood"].fuel_value,
 		  },
 		  {
 			type = "recipe",
@@ -42,16 +53,7 @@ if Config.enableCrappyBelts then
 	belt.resistances = nil
 	--belt.animation_speed_coefficient = belt.animation_speed_coefficient/2
 	belt.speed = belt.speed/2
-	redirectTexture(belt.animations)
-	redirectTexture(belt.belt_horizontal)
-	redirectTexture(belt.belt_vertical)
-	redirectTexture(belt.ending_top)
-	redirectTexture(belt.ending_bottom)
-	redirectTexture(belt.ending_side)
-	redirectTexture(belt.belt_horizontal)
-    redirectTexture(belt.starting_top)
-    redirectTexture(belt.starting_bottom)
-    redirectTexture(belt.starting_side)
+	redirectTexture(belt.belt_animation_set)
 	belt.minable.result = belt.name
 	
 	local item = table.deepcopy(data.raw.item["transport-belt"])

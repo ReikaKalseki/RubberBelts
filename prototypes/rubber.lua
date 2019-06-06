@@ -9,7 +9,7 @@ data:extend(
 	icon_size = 32,
     flags = {},
     subgroup = "intermediate-product",
-    order = "f[raw-wood]-f[raw-wood-1-2]",
+    order = "f[wood]-f[wood-1-2]",
     stack_size = 200
   },
   {
@@ -19,7 +19,7 @@ data:extend(
 	icon_size = 32,
     flags = {},
     subgroup = "intermediate-product",
-    order = "f[raw-wood]-f[raw-wood-1-2]",
+    order = "f[wood]-f[wood-1-2]",
     stack_size = 200
   },
 })
@@ -29,16 +29,16 @@ data:extend(
   {
     type = "recipe",
     name = "resin",
-    --ingredients = {{"raw-wood", 1}},
+    --ingredients = {{"wood", 1}},
     --result = "resin",
     --result_count = 3
 	normal = {
-		ingredients = {{"raw-wood", 1}},
+		ingredients = {{"wood", 1}},
 		result = "resin",
 		result_count = 3
 	},
 	expensive = {
-		ingredients = {{"raw-wood", 2}},
+		ingredients = {{"wood", 2}},
 		result = "resin",
 		result_count = 3
 	},
