@@ -23,6 +23,9 @@ if not Config.replaceIronRecipe then
 	
 
 	if data.raw.technology["basic-logistics"] then --AAI Industry "basic logistics"
+		if not data.raw.technology["basic-logistics"].effects then
+			data.raw.technology["basic-logistics"].effects = {}
+		end
 		table.insert(data.raw.technology["basic-logistics"].effects, {type = "unlock-recipe", recipe = "rubber-transport-belt"})
 	end
 end
