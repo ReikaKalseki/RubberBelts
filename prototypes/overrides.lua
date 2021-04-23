@@ -22,6 +22,10 @@ if Config.replaceIronRecipe then
 	end
 end
 
+local conv = createConversionRecipe("wooden-belt", "transport-belt", false, nil, true)
+conv.enabled = true
+data:extend({conv})
+
 if data.raw.recipe["bob-resin-wood"] and Config.replaceIronRecipe then --his can normally only be made in an assembler, which is a problem if you need it for belts
 	data.raw.recipe["bob-resin-wood"].category = "crafting"
 end
